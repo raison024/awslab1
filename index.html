@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <div class="cover">
+            <div class="poster"></div>
+        </div>
+        <br>
+        <h2 style="color: #e3252b;">Spider-Man: No Way Home</h2>
+        <br>
+        <h4>Runtime:</h4>
+        <p>2 hours and 30 minutes</p>
+        <h4>Rating:</h4>
+        <span class="fa fa-star checked">4.3</span>
+
+        <br>
+        <video width="900" controls autoplay muted>
+            <source src="./assets/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        
+        <p>Listen to the audio here</p>
+        <audio controls>
+            <source src="./assets/movie.mp4" type="audio/mp4">
+            Your browser does not support the audio element.
+          </audio>
+          <br>
+
+        <button onclick="getLocation()">Add Location</button>
+        <p id="demo"></p>
+            <script src="geolocation.js"></script>
+
+        <div class="row" style="margin-top: 70px;">
+            <!-- First part -->
+            <div class="column" style="margin-right: 100px;">
+            <div id="sketch" style="background-color: #000; height:400px; width: 400px;">
+                <h3 style="color: #fff;">Canvas</h3>
+                <canvas id="paint"></canvas>
+            </div>
+            <script src="canvas.js"></script>
+            </div>
+
+            <!-- Second part -->
+            <div class="column">
+            <h3>Please Enter your details:</h3>
+            <br>
+            <input type="search" id="search" name="search" placeholder="Search here" />
+            <br>
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <br>
+            <input type="tel" id="tel" name="tel" placeholder="+91" />
+            <br>
+            <input type="url" id="url" name="url" placeholder="url" />
+            <br>
+        
+            <label for="price">Slider: </label>
+            <input type="range" name="price" id="price" min="10" max="100" step="5" value="10" />
+            <output class="price-output" for="price"></output>
+            <script src="price.js"></script>
+            <br>
+
+            <input type="datetime-local" name="datetime" id="datetime" />
+            </div>
+        </div>
+
+    </body>
+
+</html>
